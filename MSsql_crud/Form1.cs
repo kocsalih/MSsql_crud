@@ -107,5 +107,10 @@ namespace MSsql_crud
             textBox3.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             textBox4.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
