@@ -41,21 +41,23 @@ namespace MSsql_crud
             this.label1 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnGetirID = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(38, 414);
+            this.btnEkle.Location = new System.Drawing.Point(735, 208);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(84, 26);
             this.btnEkle.TabIndex = 0;
             this.btnEkle.Text = "EKLE";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(566, 415);
+            this.textBox1.Location = new System.Drawing.Point(38, 410);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(112, 24);
             this.textBox1.TabIndex = 1;
@@ -69,19 +71,21 @@ namespace MSsql_crud
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(640, 377);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.Location = new System.Drawing.Point(156, 414);
+            this.btnGuncelle.Location = new System.Drawing.Point(852, 208);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(84, 26);
             this.btnGuncelle.TabIndex = 0;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(282, 414);
+            this.btnSil.Location = new System.Drawing.Point(969, 208);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(84, 26);
             this.btnSil.TabIndex = 0;
@@ -90,9 +94,9 @@ namespace MSsql_crud
             // 
             // btnUrunGetir
             // 
-            this.btnUrunGetir.Location = new System.Drawing.Point(421, 414);
+            this.btnUrunGetir.Location = new System.Drawing.Point(569, 397);
             this.btnUrunGetir.Name = "btnUrunGetir";
-            this.btnUrunGetir.Size = new System.Drawing.Size(84, 26);
+            this.btnUrunGetir.Size = new System.Drawing.Size(109, 51);
             this.btnUrunGetir.TabIndex = 0;
             this.btnUrunGetir.Text = "Ürün Getir";
             this.btnUrunGetir.UseVisualStyleBackColor = true;
@@ -100,7 +104,7 @@ namespace MSsql_crud
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(800, 32);
+            this.textBox2.Location = new System.Drawing.Point(829, 44);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(176, 24);
             this.textBox2.TabIndex = 1;
@@ -108,7 +112,7 @@ namespace MSsql_crud
             // AD
             // 
             this.AD.AutoSize = true;
-            this.AD.Location = new System.Drawing.Point(731, 35);
+            this.AD.Location = new System.Drawing.Point(760, 47);
             this.AD.Name = "AD";
             this.AD.Size = new System.Drawing.Size(28, 18);
             this.AD.TabIndex = 3;
@@ -116,7 +120,7 @@ namespace MSsql_crud
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(800, 84);
+            this.textBox3.Location = new System.Drawing.Point(829, 96);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(176, 24);
             this.textBox3.TabIndex = 1;
@@ -124,7 +128,7 @@ namespace MSsql_crud
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(731, 87);
+            this.label1.Location = new System.Drawing.Point(760, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 18);
             this.label1.TabIndex = 3;
@@ -132,7 +136,7 @@ namespace MSsql_crud
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(800, 141);
+            this.textBox4.Location = new System.Drawing.Point(829, 153);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(176, 24);
             this.textBox4.TabIndex = 1;
@@ -140,17 +144,28 @@ namespace MSsql_crud
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(731, 144);
+            this.label2.Location = new System.Drawing.Point(760, 156);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "FİYAT";
+            // 
+            // btnGetirID
+            // 
+            this.btnGetirID.Location = new System.Drawing.Point(38, 440);
+            this.btnGetirID.Name = "btnGetirID";
+            this.btnGetirID.Size = new System.Drawing.Size(112, 51);
+            this.btnGetirID.TabIndex = 4;
+            this.btnGetirID.Text = "ID Getir";
+            this.btnGetirID.UseVisualStyleBackColor = true;
+            this.btnGetirID.Click += new System.EventHandler(this.btnGetirID_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 818);
+            this.Controls.Add(this.btnGetirID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AD);
@@ -187,6 +202,7 @@ namespace MSsql_crud
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnGetirID;
     }
 }
 
